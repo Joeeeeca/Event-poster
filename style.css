@@ -1,0 +1,179 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1f1f1f, #3a3a3a);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    text-align:center;
+}
+
+h1, h2 {
+    font-family: 'Poppins', sans-serif;
+    margin-top:0;
+}
+
+#contact h2 {
+    margin-top: 20px;
+}
+
+.about-event h2, .event-schedule h2 {
+    margin-top: 0;
+}
+
+.hero {
+    background: linear-gradient(135deg, #0066ff42, #0033cc94), url(images/hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero .date {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#countdown {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: inline-block;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Custom container and grid system */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col-4 {
+    flex: 0 0 33.33%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+/* Section styles */
+.about-event, .event-schedule, .contact-info {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 60px 30px; /* Increased padding for more space */
+    margin-top: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-event:hover, .event-schedule:hover, .contact-info:hover {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+}
+
+.about-event h2, .event-schedule h2, .contact-info h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-event p, .event-schedule p, .contact-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.event-schedule ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Makes the list items stack vertically */
+    padding-left: 0; /* Removes default list padding */
+    list-style-type: none; /* Removes default list bullets */
+    margin: 0;
+}
+
+.list-group-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border to enhance separation */
+    color: #ffffff;
+    padding: 15px;
+    font-size: 1.1rem; /* Slightly bigger font */
+    transition: background-color 0.3s ease;
+    list-style-type: none;
+}
+
+.list-group-item:hover {
+    background: rgba(255, 255, 255, 0.2); /* Hover effect */
+}
+
+a {
+    color: #66ccff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .col-4 {
+        flex: 0 0 50%;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero .date {
+        font-size: 1.2rem;
+    }
+
+    #countdown {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .col-4 {
+        flex: 0 0 100%;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero .date {
+        font-size: 1rem;
+    }
+
+    #countdown {
+        font-size: 1rem;
+    }
+}
